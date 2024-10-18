@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'CreativZooSerif'; /* Give your font a name */
+    src: url('fonts/CreativZoo Serif v2.1.ttf') format('truetype'); /* Specify the path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
 .page {
     position: relative;
     display: flex;
@@ -8,73 +15,52 @@ main {
     flex: 1;
 }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-}
-
-.top-row {
-    background-color: #f7f7f7;
+.navbar {
+    background-color: #373634; /* Background color for the navbar */
     border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
+    padding: 1.5rem 0; /* Bottom border for separation */
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+
+
 }
 
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
+    .navbar ul {
+        list-style-type: none; /* Remove default bullet points */
+        padding:0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        display: flex; /* Use flexbox for horizontal layout */
+        flex-grow: 1;
+        justify-content: center; /* Align items to the left */
+        align-items: center;
+    }
+
+    .navbar li {
+        margin-right:85px; /* Spacing between items */
+        display: flex;
+    }
+
+    .navbar a {
+        font-family: 'CreativZooSerif', serif; /* Use your custom font */
         text-decoration: none;
+        color: #FFFFFF; /* Font color */
+        padding: 0;
+        font-size: 19px;
+        line-height: 1;
+        position: relative;
+        top: 35px;
+        transition: color 0.3s, opacity 0.3s; /* Smooth transition for color and opacity */
+        
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row ::deep a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row {
-        justify-content: space-between;
-    }
-
-    .top-row ::deep a, .top-row ::deep .btn-link {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 641px) {
-    .page {
-        flex-direction: row;
-    }
-
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth ::deep a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row, article {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-}
+        .navbar a:hover {
+            color: #f29f05; /* Dimmed color on hover */
+            opacity: 0.7; /* Dim the text on hover */
+        }
 
 #blazor-error-ui {
     background: lightyellow;
@@ -93,4 +79,73 @@ main {
         position: absolute;
         right: 0.75rem;
         top: 0.5rem;
+    }
+
+
+
+
+
+
+.logo {
+    width: 100px;
+    height: auto;
+    position:   relative;
+    bottom:30px;
+    left: 50px;
+    max-height: 100%;
+    flex-shrink:0;
+}
+.logo:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.orange-box-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 45px;
+    margin-left:0px;
+    position: absolute;
+    top: 33%;
+    right: 50px;
+    transform:translateY(-50%)
+
+}
+.orange-box {
+    background-color: #f29f05;
+    color: #FFFFFF;
+    padding: 15px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'CreativZooSerif', serif;
+    font-size: 19.5px;
+    width: 155px;
+    height: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.orange-box:hover {
+    background-color: #d87f04;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.box-text{
+    display:flex;
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.orange-box:hover .box-text {
+    color: white;
+}
+    .orange-box img {
+        max-width: 40%;
+        max-height:40%;
     }

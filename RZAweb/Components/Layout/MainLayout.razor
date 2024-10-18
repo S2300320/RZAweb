@@ -1,18 +1,44 @@
 ﻿@inherits LayoutComponentBase
 <head>
-  <link rel="stylesheet" href="css/styles.css"/>
-
-  </head>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <nav class="navbar">
+    <a a href="#" class="logo">
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        <img src="elements/logo.png" alt="Zoo Logo" class="logo" />
+
+    </a>
+        <ul>
+            <li><a href="/home">PLAN YOUR VISIT</a></li>
+            <li><a href="/zoo">OUR ANIMALS</a></li>
+            <li><a href="/hotel">LATEST NEWS</a></li>
+            <li><a href="/hotel">EVENTS</a></li>
+            <li><a href="/hotel">EXPERIENCES</a></li>
+            <!--  <li><a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a></li> -->
+            <!-- Add more navigation links as needed -->
+        </ul>
+
+        <div class="orange-box-container">
+            <a href="">
+            <div class="orange-box">
+                <img src="UI/Box1.png" alt="Box 1" />
+                <div class="box-text">Join Crew</div>
+            </div>
+            </a>
+            <a href="#">
+            <div class="orange-box">
+                <img src="UI/Box2.png" alt="Box 2" />
+                <div class="box-text">Book Tickets</div>
+            </div>
+            </a>
         </div>
 
+
+      
+    </nav>
+
+    <main>
         <article class="content px-4">
             @Body
         </article>

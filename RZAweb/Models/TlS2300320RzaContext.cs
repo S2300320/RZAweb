@@ -23,7 +23,7 @@ public partial class TlS2300320RzaContext : DbContext
     public virtual DbSet<Roombooking> Roombookings { get; set; }
 
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-       // => optionsBuilder.UseMySql("name=MySqlConnection", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.29-mysql"));
+    //    => optionsBuilder.UseMySql("name=MySqlConnection", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.29-mysql"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -43,9 +43,7 @@ public partial class TlS2300320RzaContext : DbContext
 
             entity.HasIndex(e => e.Username, "username").IsUnique();
 
-            entity.Property(e => e.CustomerId)
-                .ValueGeneratedNever()
-                .HasColumnName("customerID");
+            entity.Property(e => e.CustomerId).HasColumnName("customerID");
             entity.Property(e => e.DateOfBirth).HasColumnName("dateOfBirth");
             entity.Property(e => e.Email)
                 .HasMaxLength(50)
@@ -53,6 +51,9 @@ public partial class TlS2300320RzaContext : DbContext
             entity.Property(e => e.FirstName)
                 .HasMaxLength(20)
                 .HasColumnName("firstName");
+            entity.Property(e => e.LastName)
+                .HasMaxLength(20)
+                .HasColumnName("lastName");
             entity.Property(e => e.LoyaltyPoints).HasColumnName("loyaltyPoints");
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
