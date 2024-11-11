@@ -1,4 +1,5 @@
-﻿using RZAweb.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using RZAweb.Models;
 
 namespace RZAweb.Services
 {
@@ -17,6 +18,27 @@ namespace RZAweb.Services
             await _context.SaveChangesAsync();
         }
 
+        public async Task<Customer?> LogIn(Customer customer)
+        {
+            return await _context.Customers.FirstOrDefaultAsync(
+                c => c.Username == customer.Username &&
+                c.Password == customer.Password);
+        }
+        public async Task ChangePassword(int customerId, string hashedOldpassword, string hashedNewPassword)
+        {
+            Customer? customer = await _context.Customers.SingleOrDefaultAsync(
+                c => c.CustomerId == customerId && c.Password == hashedOldpassword);
+            if (customer != null) 
+            {
+                customer.Password = hashedNewPassword;
+                await _context.SaveChangesAsync();
+
+            }
+                
+            customer.Password = hashedNewPassword;
+            await _context.SaveChangesAsync();
+
+        }
         
     }
 }

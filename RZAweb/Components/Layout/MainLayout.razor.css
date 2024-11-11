@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'CreativZooSerif'; /* Give your font a name */
-    src: url('fonts/CreativZoo Serif v2.1.ttf') format('truetype'); /* Specify the path to your font file */
+    font-family: 'CreativZooSerif'; /*  font a name */
+    src: url('fonts/CreativZoo Serif v2.1.ttf') format('truetype'); /*  path to  font file */
     font-weight: normal;
     font-style: normal;
 }
@@ -16,50 +16,47 @@ main {
 }
 
 .navbar {
-    background-color: #373634; /* Background color for the navbar */
+    background-color: #373634; 
     border-bottom: 1px solid #d6d5d5;
-    padding: 1.5rem 0; /* Bottom border for separation */
+    padding: 1.5rem 0; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     height: 180px;
     overflow: hidden;
-
-
 }
 
     .navbar ul {
-        list-style-type: none; /* Remove default bullet points */
-        padding:0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
-        display: flex; /* Use flexbox for horizontal layout */
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0; 
+        display: flex; /*  flexbox  */
         flex-grow: 1;
-        justify-content: center; /* Align items to the left */
+        justify-content: center; 
         align-items: center;
     }
 
     .navbar li {
-        margin-right:85px; /* Spacing between items */
+        margin-right: 85px; /* Spacing between items */
         display: flex;
     }
 
     .navbar a {
-        font-family: 'CreativZooSerif', serif; /* Use your custom font */
+        font-family: 'CreativZooSerif', serif; /* custom font */
         text-decoration: none;
-        color: #FFFFFF; /* Font color */
+        color: #FFFFFF; 
         padding: 0;
         font-size: 19px;
         line-height: 1;
         position: relative;
         top: 35px;
-        transition: color 0.3s, opacity 0.3s; /* Smooth transition for color and opacity */
-        
+        transition: color 0.3s, opacity 0.3s; 
     }
 
         .navbar a:hover {
-            color: #f29f05; /* Dimmed color on hover */
-            opacity: 0.7; /* Dim the text on hover */
+            color: #f29f05; 
+            opacity: 0.7; 
         }
 
 #blazor-error-ui {
@@ -81,35 +78,32 @@ main {
         top: 0.5rem;
     }
 
-
-
-
-
-
 .logo {
     width: 100px;
     height: auto;
-    position:   relative;
-    bottom:30px;
+    position: relative;
+    bottom: 30px;
     left: 50px;
     max-height: 100%;
-    flex-shrink:0;
+    flex-shrink: 0;
 }
-.logo:hover{
-    transform: scale(1.1);
-    opacity: 1;
-}
+
+    .logo:hover {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
 .orange-box-container {
     display: flex;
     justify-content: flex-start;
     margin-right: 45px;
-    margin-left:0px;
+    margin-left: 0px;
     position: absolute;
     top: 33%;
     right: 50px;
-    transform:translateY(-50%)
-
+    transform: translateY(-50%);
 }
+
 .orange-box {
     background-color: #f29f05;
     color: #FFFFFF;
@@ -128,14 +122,14 @@ main {
     position: relative;
 }
 
-.orange-box:hover {
-    background-color: #d87f04;
-    cursor: pointer;
-    transform: scale(0.95);
-}
+    .orange-box:hover {
+        background-color: #d87f04;
+        cursor: pointer;
+        transform: scale(0.95);
+    }
 
-.box-text{
-    display:flex;
+.box-text {
+    display: flex;
     position: absolute;
     color: white;
     text-align: center;
@@ -145,7 +139,10 @@ main {
 .orange-box:hover .box-text {
     color: white;
 }
-    .orange-box img {
-        max-width: 40%;
-        max-height:40%;
-    }
+
+.orange-box img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+

@@ -1,0 +1,34 @@
+﻿@using RZAweb.Utilities
+@using RZAweb.Services
+@inject UserSession UserSession
+@inject CustomerService CustomerService
+
+@rendermode InteractiveServer
+
+@page "/modify"
+
+@* <h3>ModifyAccount</h3>
+<p> new password</p>
+<input @bind-value=@newPassword />
+<p>old password</p>
+<input @bind-value=@oldPassword />
+<p> Confirm old password</p>
+<input @bind-value=@oldPasswordConfirm />
+<button onclick=@ChangePassword>Change password</button> *@
+
+@code {
+    // private string newPassword;
+    // private string oldPassword;
+    // private string oldPasswordConfirm;
+    // private async Task ChangePassword()
+    // {
+    //     if (oldPassword == oldPasswordConfirm)
+    //     {
+    //         string hashedOldPassword = PasswordUtils.HashPassword(newPassword);
+    //         string hashedNewPassword = PasswordUtils.HashPassword(newPassword);
+    //         await CustomerService.ChangePassword(UserSessio.UserId, hashedOldPassword, hashedNewPassword);
+    //     }
+
+    // }
+
+}

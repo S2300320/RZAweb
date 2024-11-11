@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using RZAweb.Components;
 using RZAweb.Models;
 using RZAweb.Services;
+using RZAweb.Utilities;
 
 
 namespace RZAweb
@@ -18,6 +19,10 @@ namespace RZAweb
 
             builder.Services.AddDbContext<TlS2300320RzaContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"), new MySqlServerVersion(new Version(8, 0, 29))));
             builder.Services.AddScoped<CustomerService>();
+
+            builder.Services.AddScoped<UserSession>();
+            builder.Services.AddSingleton<UserSession>();
+
 
             var app = builder.Build();
 
