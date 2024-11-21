@@ -19,9 +19,13 @@ namespace RZAweb
 
             builder.Services.AddDbContext<TlS2300320RzaContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"), new MySqlServerVersion(new Version(8, 0, 29))));
             builder.Services.AddScoped<CustomerService>();
-
+          
             builder.Services.AddScoped<UserSession>();
+            builder.Services.AddScoped<AttractionService>();
             builder.Services.AddSingleton<UserSession>();
+            builder.Services.AddScoped<TicketService>();
+            builder.Services.AddScoped<TicketbookingService>();
+          
 
 
             var app = builder.Build();
