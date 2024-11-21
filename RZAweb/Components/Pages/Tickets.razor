@@ -39,13 +39,15 @@ else
     {
         if ( UserSession.UserId == 0)
         {
-            NavigationManager.NavigateTo("/");
-        }
-        else
-        {
             attractions = await AttractionService.GetAttractionsAsync();
             tickets = new List<Ticket>();
             newTicketbooking = new Ticketbooking();
+        }
+        else
+        {
+          
+           Console.WriteLine("NO ATTRACTIONS");
+           <div> <h1>No attractions</h1></div>
         }
     }
     private void AddTicket(int attractionId)
